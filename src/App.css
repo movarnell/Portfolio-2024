@@ -1,3 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Lobster+Two&display=swap');
+
 @keyframes gradient-x {
   0%, 100% {
     background-position: 0% 50%;
@@ -10,4 +15,108 @@
 .animate-gradient-x {
   animation: gradient-x 15s ease infinite;
   background-size: 200% 200%;
+}
+
+.comet-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.comet {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, #ffffff 50%, rgba(255,255,255,0) 100%);
+  animation: comet 5s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.comet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, #64748b, transparent);
+}
+
+@keyframes comet {
+  0% {
+    transform: rotate(215deg) translateX(0);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(215deg) translateX(-500px);
+    opacity: 0;
+  }
+}
+
+@keyframes explode {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+}
+
+.explosion {
+  position: absolute;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+  border-radius: 50%;
+  animation: explode 0.5s ease-out forwards;
+}
+
+.bungee {
+	font-family: bungee, Arial, Helvetica, sans-serif;
+    text-wrap: pretty;
+}
+
+.lato-font {
+  font-family: 'Lato', sans-serif;
+}
+
+.merriweather-font {
+  font-family: 'Merriweather', serif;
+}
+
+.roboto-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+.lobster-two {
+  font-family: 'Lobster Two', cursive;
+}
+
+.courier-prime {
+  font-family: 'Courier Prime', monospace;
+}
+
+.icon {
+  margin-block: .3em;
+   max-width: 60px;
+   max-height: 60px;
+   margin-inline: .25em;
+  
+
+}
+
+.icon-container {
+
+  margin-top: .75em;
+
+
 }

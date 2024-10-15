@@ -2,9 +2,9 @@ import codeProblemsImage from '../../assets/CodeProblemsSquare.png';
 import mockItImage from '../../assets/Mock It.png';
 import helpCodeItLogo from '../../assets/helpcodeitlogo.svg';
 import dogParkImage from '../../assets/Dog Park.png';
-import ntheSportsLogo from '../../assets/nthesportslogo.png';
 import movieReviewsLogo from '../../assets/Movie Reviews by You.svg';
 import hangmanImage from '../../assets/hang.png';
+import fakestoreImage from '../../assets/fakestore.png';
 
 const projects = [
   {
@@ -42,7 +42,7 @@ const projects = [
   {
     title: "Fake Store",
     description: "A mock storefront showcasing a complex React app with dynamic product pages and shopping cart functionality.",
-    image: ntheSportsLogo,
+    image: fakestoreImage,
     githubLink: "https://github.com/movarnell/fakestore",
     liveLink: "https://fakestore.michaelvarnell.com",
     icons: ["React", "JavaScript", "React Router", "HTML5", "CSS3", "Bootstrap"],

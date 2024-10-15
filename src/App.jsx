@@ -19,7 +19,7 @@ function App() {
     setDarkMode(newDarkMode)
     localStorage.setItem('darkMode', newDarkMode.toString())
   }
-
+console.log("above return:", projects)
   return (
     <ThemeProvider value={{ darkMode, toggleDarkMode }}>
       <div className={` min-h-screen pb-5 transition-colors duration-300 ${darkMode ? 'dark bg-gray-900' : 'bg-gray-200'}`}>
@@ -32,10 +32,15 @@ function App() {
           <main className={`${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
             <Hero />
             <div className="px-4 mx-auto">
-              <div className="grid grid-cols-3 gap-6 pb-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-                {projects.map((project) => (
-                  <ProjectCard key={project.title} {...project} />
-                ))}
+              <div className="grid grid-cols-1 gap-6 pb-5 md:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project) => {
+                  return (
+                    <div key={project.title}>
+                      {console.log("project:", project.title)}
+                      <ProjectCard project={project} />
+                    </div>
+                  )
+                })}
               </div>
             </div>
           </main>
