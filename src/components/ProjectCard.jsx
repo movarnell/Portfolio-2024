@@ -38,8 +38,8 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       {/* Move the image to the top of the card */}
-      <div className="w-full h-48">
-        <img src={image} alt={title} className="w-full h-full object-cover object-center" />
+      <div className="w-full h-60 flex items-center justify-center">
+        <img src={image} alt={title} className="h-full object-fit object-center" />
       </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
@@ -73,8 +73,8 @@ const ProjectCard = ({ project }) => {
           )}
         </div>
         <div>
-          <h4 className="text-sm font-medium text-gray-500 mb-2">Technologies Used</h4>
-          <div className="flex flex-wrap gap-2">
+          <h4 className="text-sm font-bold text-gray-500 mb-2 text-center">Technologies Used</h4>
+          <div className="flex flex-wrap justify-evenly gap-2">
             {icons.map((icon, index) => (
               <img
                 key={index}
