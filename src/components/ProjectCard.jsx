@@ -38,13 +38,13 @@ const ProjectCard = ({ project }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden">
       {/* Move the image to the top of the card */}
-      <div className="w-full h-60 flex items-center justify-center">
-        <img src={image} alt={title} className="h-full object-fit object-center" />
+      <div className="w-full h-60 flex items-center justify-center my-1 rounded-lg">
+        <img src={image} alt={title} className="h-full object-fit object-center rounded-lg" />
       </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold text-gray-800 mb-4">{title}</h3>
         <p className="text-gray-600 mb-6">{description}</p>
-        <div className="flex space-x-4 mb-6">
+        <div className="flex space-x-4 mb-6 justify-center">
           {liveLink && (
             <a
               href={liveLink}

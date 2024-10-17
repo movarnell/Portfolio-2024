@@ -32,7 +32,7 @@ console.log("above return:", projects)
           <main className={`${darkMode ? 'text-gray-200' : 'text-gray-800'}`}>
             <Hero />
             <div className="px-4 mx-auto">
-              <div className="grid grid-cols-1 gap-6 pb-5 md:grid-cols-2 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-5 pb-5 md:grid-cols-2 xl:grid-cols-3">
                 {projects.map((project) => {
                   return (
                     <div key={project.title}>
